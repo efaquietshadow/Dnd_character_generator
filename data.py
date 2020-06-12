@@ -182,7 +182,7 @@ data = {
         "bard": {
             "name":"Bard",
             "description":"an inspiring magician whose power echoes the music of creation",
-            "proficiences": {
+            "proficiencies": {
                 "armor": "light armor",
                 "weapons": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
                 # "tools": three musical instruments
@@ -191,7 +191,7 @@ data = {
         "cleric": {
             "name":"Cleric",
             "description":"a priestly champion who wields divine magic in service of a higher power",
-            "proficiences": {
+            "proficiencies": {
                 "armor": ["light armor", "medium armor", "shields"],
                 "weapons": "simple weapons"
             }
@@ -199,7 +199,7 @@ data = {
         "druid": {
             "name":"Druid",
             "description":"a priest of the Old Faith, wielding the powers of nature-moonlight and plant growth, fire and lightning-and adopting animal forms ",
-            "proficiences": {
+            "proficiencies": {
                 "armor": ["light armor", "medium armor", "shields"], #nothing metal
                 "weapons": ["clubs", "daggers", "darts", "javelins", "maces", "quarterstaffs", "scimitars", "sickles", "slings", "spears"],
                 "tools": "herbalism kit"
@@ -208,7 +208,7 @@ data = {
         "fighter": {
             "name":"Fighter",
             "description":"a master of martial combal, skilled with a variety of weapons and armor",
-            "proficiences": {
+            "proficiencies": {
                 "armor": ["all armor", "shields"],
                 "weapons": ["simple weapons", "martial weapons"]
             }
@@ -216,7 +216,7 @@ data = {
         "monk": {
             "name":"Monk",
             "description":"a master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",
-            "proficiences": {
+            "proficiencies": {
                 "weapons":["simple weapons", "shortswords"],
                 # "tools": one artisan or one musical instrument
             }
@@ -224,7 +224,7 @@ data = {
         "paladin": {
             "name":"Paladin",
             "description":"a holy warrior bound to a sacred oath",
-            "proficiences": {
+            "proficiencies": {
                 "armor": ["all armor", "shields"],
                 "weapons": ["simple weapons", "martial weapons"]
             }
@@ -232,7 +232,7 @@ data = {
         "ranger": {
             "name":"Ranger",
             "description":"a warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
-            "proficiences": {
+            "proficiencies": {
                 "armor": ["light armor", "medium armor", "shields"],
                 "weapons": ["simple weapons", "martial weapons"]
             }
@@ -240,7 +240,7 @@ data = {
         "rouge": {
             "name":"Rouge",
             "description":"a scoundrel who uses stealth and trickery to overcome obstaces and enemies",
-            "proficiences": {
+            "proficiencies": {
                 "armor": "light armor",
                 "weapons": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
                 "tools": "thieves tools"
@@ -249,14 +249,14 @@ data = {
         "sorcerer": {
             "name":"Sorcerer",
             "description":"a spellcasler who draws on inherent magic from a gift or bloodline",
-            "proficiences": {
+            "proficiencies": {
                 "weapons": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"]
             }
         },
         "warlock": {
             "name":"Warlock",
             "description":"a wielder of magic that is derived from a bargain with an extraplanar entity",
-            "proficiences": {
+            "proficiencies": {
                 "armor": "light armor",
                 "weapons": "simple weapons"
             }
@@ -264,7 +264,7 @@ data = {
         "wizard": {
             "name":"Wizard",
             "description":"a scholarly magic-user capable of manipulating the structures of reality",
-            "proficiences": {
+            "proficiencies": {
                 "weapons": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"]
             }
         }
@@ -272,35 +272,35 @@ data = {
     "backgrounds": {
         "acolyte": {
             "name":"Acolyte",
-            "proficiences": {
+            "proficiencies": {
                 "skills": ["insight", "religion"],
                 # two languages
             }
         },
         "charlatan": {
             "name":"Charlatan",
-            "proficiences": {
+            "proficiencies": {
                 "skills": ["deception", "sleight of hand"],
                 "tools": ["disguise kit", "forgery kit"]
             }
         },
         "criminal": {
             "name":"Criminal",
-            "proficiences": {
+            "proficiencies": {
                 "skills": ["deception", "stealth"],
                 "tools": ["thieves tools"] #one gaming set
             }
         },
         "entertainer": {
             "name":"Entertainer",
-            "proficiences": {
+            "proficiencies": {
                 "skills": ["acrobatics", "performance"],
                 "tools": ["disguise kit"] #one musical instrament
             }
         },
         "folk_hero": {
             "name":"Folk Hero",
-            "proficiences": {
+            "proficiencies": {
                 "skills": ["animal handling", "survival"],
                 "tools": ["vehicles(land"] # one artisan tools
             }
@@ -353,14 +353,14 @@ data = {
         },
         "soldier": {
             "name":"Soldier",
-            "proficiences": {
+            "proficiencies": {
                 "skills": ["athletics", "intimidation"],
                 "tools": ["vehicles(land)"] #gaming set
             }
         },
         "urchin": {
             "name":"Urchin",
-            "proficiences": {
+            "proficiencies": {
                 "skills": ["sleight of hand", "stealth"],
                 "tools": ["disguise kit", "thieves tools"]
             }

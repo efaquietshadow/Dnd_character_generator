@@ -75,4 +75,6 @@ print(f" Your {race_name} race bonus gave you {', '.join(race_bonus_list)}.\n")
 
 class_description = random_class["description"]
 
-print(f" Your class is {class_name}, {class_description}")
+class_proficiencies = random_class["proficiencies"]
+
+print(f" Your class is {class_name}, {class_description}, {class_proficiencies}")
