@@ -58,7 +58,7 @@ for stat, bonus in race_bonuses.items():
     race_bonus_list.append(f"{stat.upper()} +{bonus}")  
 
 
-# printing section
+# printing section fir stats
 total_stats = str(player_stats["str"]).center(5) + str(player_stats["dex"]).center(5) + str(player_stats["con"]).center(5) + str(player_stats["int"]).center(5) + str(player_stats["wis"]).center(5) + str(player_stats["cha"]).center(5)
 
 print("STR".center(5) + "DEX".center(5) + "CON".center(5) + "INT".center(5) + "WIS".center(5) + "CHA".center(5))
@@ -70,3 +70,9 @@ print(f" Your {race_name} race bonus gave you {', '.join(race_bonus_list)}.\n")
 # TODO Pre generated stories down here
 
 
+
+# descriptions of race and class
+
+class_description = random_class["description"]
+
+print(f" Your class is {class_name}, {class_description}")
