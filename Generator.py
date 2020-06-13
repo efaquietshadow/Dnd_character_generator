@@ -77,4 +77,8 @@ class_description = random_class["description"]
 
 class_proficiencies = random_class["proficiencies"]
 
-print(f" Your class is {class_name}, {class_description}, {class_proficiencies}")
+class_armor = class_proficiencies["armor"]
+
+print(f" Your class is {class_name}, {class_description}")
+
+print(f"Your proficiencies are: \n Armor: {class_armor}")

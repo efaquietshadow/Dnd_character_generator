@@ -7,6 +7,7 @@ data = {
             "race_bonuses": {
                 "con": 2
             },
+            "speed": 25,
             "sub_races": {
                 "hill_dwarf": {
                     "sub_name": "Hill",
@@ -32,6 +33,7 @@ data = {
             "race_bonuses": {
                 "dex": 2
             },
+            "speed": 30,
             "sub_races": {
                 "high_elf": {
                     "sub_name": "High",
