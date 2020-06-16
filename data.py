@@ -4,21 +4,37 @@ data = {
     "races": {
         "dwarf": {
             "name": "Dwarf",
+            "age": [13, 350],
+            "alignment": ["lawful good", "lawful neutral", "lawful evil" "lawful good", "neutral good", "chaotic good"],
+            "size": {
+                "height": [4, 5],
+                "weight": [100, 200],
+            },
+            "speed": 25,
+            "appearance": {
+                "hair": ["black", "gray", "brown", "red"],
+                "skin": ["light brown", "deep tan", "deep brown", "pale tinged with red"],
+            },
             "race_bonuses": {
                 "con": 2
             },
-            "speed": 25,
             "sub_races": {
                 "hill_dwarf": {
                     "sub_name": "Hill",
                     "race_bonuses": {
                         "wis": 1
+                    },
+                    "passive abilities": {
+                        "dwarven_toughness": "Dwarven Toughness: Your hit point maximum increases by 1, and it increases by 1 every time you gain a level"
                     }
                 },
                 "mountain_dwarf": {
                     "sub_name": "Mountain",
                     "race_bonuses": {
                         "str": 2
+                    },
+                    "proficiencies": {
+                        "armor": ["light armor", "medium armor"]
                     }
                 }
             },
@@ -26,10 +42,20 @@ data = {
                 "weapons": ['Battleaxe', 'Handaxe', 'Throwing hammer', 'Warhammer'],
                 "tools": ['Smiths tools', 'Masons tools', 'Brewers supplies'],
                 "languages": 'Dwarvish'
-            }
+            },
+            "darkvision": "true",
+            "abilities": {
+                "dwarven_resilience": "Dwarven Resilience: advantage on saving throws against poison, and resistance against poison damage",
+                "stonecunning": " Stonecunning: Whenever you make an Intelligence (history) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus"
+            },
         },
         "elf": {
             "name": "Elf",
+            "age": [13, 750],
+            "alignment": ["chaotic good", "chaotic neutral", "chaotic evil", "lawful good", "neutral good", "chaotic good"],
+            "size": {
+                "height": [5, 6.7],
+            },
             "race_bonuses": {
                 "dex": 2
             },
@@ -37,40 +63,103 @@ data = {
             "sub_races": {
                 "high_elf": {
                     "sub_name": "High",
+                    "sub_race": {
+                        "moon": {
+                            "appearance": {
+                                "hair": ["copper", "black", "golden blonde"],
+                                "skin": "bronze",
+                                "eyes": ["golden", "silver", "black"],
+                            },
+                        },
+                        "sun": {
+                            "appearance": {
+                                "hair": ["silver-white", "black", "blue", "blonde", "brown", "red"],
+                                "skin": ["alabaster", "alabaster tinged with blue"],
+                                "eyes": ["blue", "green", "blue flecked with gold", "green flecked with gold"],
+                            },
+                        },
+                    },
                     "race_bonuses": {
                         "int": 1
                     },
                     "proficiencies": {
                         "weapons": ["longsword", "shortsword", "shortbow", "longbow"],
                         # "languages": one of choice
-                    }
+                    },
+                    "spells": {
+                        # "cantip": one from wizard spell list
+                    },
                 },
                 "wood_elf": {
                     "sub_name": "Wood",
+                    "speed": 35,
+                    "appearance": {
+                        "hair": ["brown", "black", "copper", "blonde"],
+                        "skin": ["copper", "copper with trace of green"],
+                        "eyes": ["green", "brown", "hazel"]
+                    },
                     "race_bonuses": {
                         "wis": 1
                     },
                     "proficiencies": {
                         "weapons": ["longsword", "shortsword", "shortbow", "longbow"]
+                    },
+                    "abilities": {
+                        "mask_of_the_wild": "Mask of the Wild: You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist and other natural phenomena"
                     }
                 },
                 "dark_elf": {
                     "sub_name": "Drow",
+                    "alignment": ["lawful evil", "neutral evil", "chaotic evil"],
+                    "appearance": {
+                        "hair": ["stark white", "pale yellow"],
+                        "skin": "black",
+                        "eyes": ["lilac", "silver", "pink", "pale red", "pale blue"]
+                    },
                     "race_bonuses": {
                         "cha": 1
                     },
                     "proficiencies": {
                         "weapons": ["rapier", "shortsword", "hand crossbow"]
+                    },
+                    "abilities": {
+                        "superior_darkvision": "Superior Darkvision: Your darkvision has a radius of 120 feet",
+                        "sunlight_sensitivity": "Sunlight Sensitivity: You have disadvantage on attack rolls and on Wisdom (perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight"
+                    },
+                    "spells": {
+                        "cantrips": {
+                            # "dancing_lights":
+                            # "faerie_fire":
+                            # "darkness":
+                        },
                     }
                 }
             },
+            "darkvision": "true",
             "proficiencies": {
                 "skills": "Perception",
                 "languages": 'Elvish'
+            },
+            "abilities": {
+                "fey_ancestry": "Fey Ancestry: advantage on saving throws against being charmed, and magic can't put you to sleep",
+                "trance": "Trance: elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
             }
         },
         "halfling": {
             "name": "Halfling",
+            "age": [13, 150],
+            "alignment": ["lawful good"],
+            "size": {
+                "height": 3,
+                "weight": [40, 45],
+                "size": "small"
+            },
+            "speed": 25,
+            "appearance": {
+                "hair": ["brown", "sandy brown"],
+                "skin": ["tan", "pale with a ruddy cast"],
+                "eyes": ["brown", "hazel"]
+            },
             "race_bonuses": {
                 "dex": 2
             },
@@ -79,21 +168,41 @@ data = {
                     "sub_name": "Lightfoot",
                     "race_bonuses": {
                         "cha": 1
+                    },
+                    "abilities": {
+                        "naturally_stealthy": "Naturally Stealthy: You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you"
                     }
                 },
                 "stout": {
                     "sub_name": "Stout",
                     "race_bonuses": {
                         "con": 1
+                    },
+                    "abilities": {
+                        "stout_resilience": "Stout Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage"
                     }
                 }
             },
             "proficiencies": {
                 "languages": 'Halfling'
+            },
+            "abilities": {
+                "lucky": "Lucky: when you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll",
+                "halfling_nimbleness": "Hafling Nimbleness: You can move through the space of any creature that is of a size larger than yours",
             }
         },
         "human": {
             "name": "Human",
+            "age": [13, 90],
+            "size": {
+                "height": [4.8, 7],
+            },
+            "speed": 30,
+            "appearance": {
+                "hair": ["dusky brown", "brown", "blonde", "almost black", "raven black", "red", "light brown", "dark brown", "black"],
+                "skin": ["dusky brown", "tawny", "fair", "amber", "dusky", "yellowish-bronze", "dark mahogany"],
+                "eyes": ["dusky brown", "green", "brown", "blue", "steely gray", "hazel", "dark"]
+            },
             "race_bonuses": {
                 "str":1,
                 "dex":1,
@@ -108,16 +217,92 @@ data = {
         },
         "dragonborn": {
             "name": "Dragonborn",
+            "age": [4, 80],
+            "alignment": ["lawful good", "neutral good", "chaotic good", "lawful evil", "neutral evil", "chaotic evil"],
+            "size": {
+                "height": 6,
+                "weight": 250
+            },
+            "speed": 30,
             "race_bonuses": {
                 "str":2,
                 "cha":1
             },
+            "draconic_ancestry": {
+                "black": {
+                    "name": "Black",
+                    "damage_type": "Acid",
+                    "breath_weapon": "5 by 30 ft line (dex. save)"
+                },
+                "blue": {
+                    "name": "Blue",
+                    "damage_type": "Lightning",
+                    "breath_weapon": "5 by 30 ft line (dex. save)"
+                },
+                "brass": {
+                    "name": "Brass",
+                    "damage_type": "fire",
+                    "breath_weapon": "5 by 30 ft line (dex save)"
+                },
+                "bronze": {
+                    "name": "Bronze",
+                    "damage_type": "Lightning",
+                    "breath_weapon": "5 by 30 ft line (dex save)"
+                },
+                "copper": {
+                    "name": "Copper",
+                    "damage_type": "Acid",
+                    "breath_weapon": "5 by 30 ft line (dex save)"
+                },
+                "gold": {
+                    "name": "Gold",
+                    "damage_type": "Fire",
+                    "breath_weapon": "15 ft cone (dex save)"
+                },
+                "green": {
+                    "name": "Green",
+                    "damage_type": "Poison",
+                    "breath_weapon": "15 ft cone (con save)"
+                },
+                "red": {
+                    "name": "Red",
+                    "damage_type": "Fire",
+                    "breath_weapon": "15 ft cone (dex save)"
+                },
+                "Silver": {
+                    "name": "Silver",
+                    "damage_type": "Cold",
+                    "breath_weapon": "15 ft cone (con save)"
+                },
+                "White": {
+                    "name": "White",
+                    "damage_type": "Cold",
+                    "breath_weapon": "15 ft cone (con save)"
+                },
+            },
             "proficiencies": {
                 "languages": 'Draconic'
-            }
+            },
+            "abilities": {
+                "breath_weapon": "Breath Weapon: You can use your action to exhale destructive energy. Your dragonic ancestery determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw. The DC for this saving throw equals 8+ your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest",
+                "damage resistance": "You have resistance to the damage type associated with your draconic ancestry"
+            },
         },
         "gnome": {
             "name": "Gnome",
+            "age": [13, 500],
+            "alignment": ["lawful good", "neutral good", "chaotic good"],
+            "size": {
+                "height": [3, 4],
+                "weight": [40, 45],
+                "size": "small"
+            },
+            "appearance": {
+                "skin": ["tan", "brown"],
+                "hair": "fair",
+                "eyes": "bright",
+            },
+            "speed": 25,
             "race_bonuses": {
                 "int":2
             },
@@ -126,49 +311,106 @@ data = {
                     "sub_name": "Forest",
                     "race_bonuses": {
                         "dex": 1
+                    },
+                    "abilities": {
+                        "speak_with_small_beasts": "Speak with small beasts: Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Forest gnomes love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets",
+                    },
+                    "spells": {
+                        # "cantrips": minor illusion
                     }
                 },
                 "rock_gnome": {
                     "sub_name": "Rock",
                     "race_bonuses": {
                         "con": 1
+                    },
+                    "abilities": {
+                        "artificers_lore": "Artificer's Lore: Whenever you make an Intellgence (history) check related to magic items, alchemical objects or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply",
+                        "tinker": "Tinker: You have proficiency with artisan's tools(tinkers tools). Using these tools, you can spend 1 hour and 10gp worth of materials to construct a Tiny clockwork device(AC 5, 1hp). The device ceases to function after 24 hours (unles you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time. \n when you create a device, choose one of the following options: \n Clockwork Toy. This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moved 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents. \n Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campire. Using the device requires your action. \n Music Box. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.",
                     }
                 }
             },
+            "darkvision": "true",
             "proficiencies": {
                 "languages": 'Gnomish'
-            }
+            },
+            "abilities": {
+                "gnome_cunning": "Gnome Cunning: You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic",
+            },
         },
         "half-elf": {
             "name": "Half-elf",
+            "age": [13, 180],
+            "alignment": ["chaotic good", "chaotic neutral", "chaotic evil"],
+            "size": {
+                "height": [4.5, 6],
+                "weight": [100, 180]
+            },
+            "speed": 30,
+            "appearance": {
+                "hair": ["copper","silver-white", "blue", "red" "black", "golden blonde", "dusky brown", "brown", "blonde", "almost black", "raven black", "red", "light brown", "dark brown", "black", "stark white", "pale yellow"],
+                "skin": ["bronze", "alabaster", "alabaster tinged with blue", "black" ,"dusky brown", "tawny", "fair", "amber", "dusky", "yellowish-bronze", "dark mahogany", "copper", "copper with trace of green"],
+                "eyes": ["golden", "silver", "black", "blue flecked with gold", "green flecked with gold", "dusky brown", "green", "brown", "blue", "steely gray", "hazel", "dark", "lilac", "silver", "pink", "pale red", "pale blue"],
+            },
             "race_bonuses": {
                 "cha": 2,
                 "choice": [1, 1]
             },
+            "darkvision": "true",
             "proficiencies": {
                 # "skills": two of choice
                 "languages": "elvish" #one of choice 
+            },
+            "abilities": {
+                "fey_ancestry": "Fey ancestry: You have advantage on saving throws against being charmed, and magic can't put you to sleep"
             }
         },
         "half-orc": {
             "name": "Half-orc",
+            "age": [10, 75],
+            "alignment": ["chaotic good", "chaotic neutral", "chaotic evil", "neutral", "lawful neutral", "chaotic neutral", "lawful evil", "neutral evil", "chaotic evil"],
+            "size": {
+                "height": [5, 7],
+                "weight": [180, 250]
+            },
+            "speed": 30,
             "race_bonuses": {
                 "str": 2,
                 "con": 1
             },
+            "darvision": "true",
             "proficiencies": {
                 "skills": "intimidation",
                 "languages": "orc"
+            },
+            "abilities": {
+                "relentless_endurance": "Relentless Endurance: When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this featurea again until you finish a long rest.",
+                "savage_attacks": "Savage Attacks: When you score a critical hit with a melle weapon attack, you can roll one of the weapons damage dice one additional time and add it to the extra damage of the critical hit."
             }
         },
         "tiefling": {
             "name": "Tiefling",
+            "age": [13, 100],
+            "alignment": ["lawful evil", "neutral evil", "chaotic evil", "chaotic good", "chaotic neutral", "chaotic evil"],
+            "speed": 30,
+            "appearance": {
+                "hair": ["black", "brown", "dark red", "blue", "purple"],
+                "skin": ["red", "pale red", "dark red", "dusky brown", "tawny", "fair", "amber", "dusky", "yellowish-bronze", "dark mahogany"],
+                "eyes": ["black", "red", "white", "silver", "gold"]
+            },
             "race_bonuses": {
                 "int": 1,
                 "cha": 2
             },
+            "darkvision": "true",
             "proficiencies": {
                 "languages": "infernal"
+            },
+            "abilities": {
+                "hellish_resistance": "Hellish Resistance: You have resistance to fire damage"
+            },
+            "spells": {
+                # thaumaturgry, hellish rebuke, darkness
             }
         }
     },

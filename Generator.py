@@ -80,5 +80,4 @@ class_proficiencies = random_class["proficiencies"]
 class_armor = class_proficiencies["armor"]
 
 print(f" Your class is {class_name}, {class_description}")
-
-print(f"Your proficiencies are: \n Armor: {class_armor}")
+print(f" Your class proficiencies are: \n Armor: {class_armor}")
