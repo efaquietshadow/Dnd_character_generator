@@ -67,17 +67,31 @@ print(total_stats +"\n")
 # print race gave you +bonus stat
 print(f" Your {race_name} race bonus gave you {', '.join(race_bonus_list)}.\n") 
 
+
+# alignment
+alignment = ["lawful good", "neutral good", "chaotic good", "lawful neutral", "chaotic neutral", "neutral", "lawful evil", "neutral evil", "chaotic evil"]
+
+race_alignment = random_race["alignment"]
+
+weighted_alignment = alignment + race_alignment
+random_alignment = random.choice(weighted_alignment)
+print(f" Alignment:{random_alignment}")
+
+
+# descriptions of class and proficiencies
+
+# class_description = random_class["description"]
+
+# class_proficiencies = random_class["proficiencies"]
+
+# class_armor = class_proficiencies["armor"]
+
+# print(f" Your class is {class_name}, {class_description}")
+# print(f" Your class proficiencies are: \n Armor: {class_armor}")
+
+
+
+
+
+
 # TODO Pre generated stories down here
-
-
-
-# descriptions of race and class
-
-class_description = random_class["description"]
-
-class_proficiencies = random_class["proficiencies"]
-
-class_armor = class_proficiencies["armor"]
-
-print(f" Your class is {class_name}, {class_description}")
-print(f" Your class proficiencies are: \n Armor: {class_armor}")

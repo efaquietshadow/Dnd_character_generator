@@ -194,6 +194,7 @@ data = {
         "human": {
             "name": "Human",
             "age": [13, 90],
+            "alignment": [],
             "size": {
                 "height": [4.8, 7],
             },
